@@ -1,0 +1,10 @@
+SECTIONS
+{
+  . = 0x11111000;
+  .text : {
+    *(.text.foo.far)
+    . = 0x11113000;
+    *(.text.foo.near)
+    *(.text.test)
+  }
+}
